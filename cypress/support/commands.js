@@ -28,4 +28,7 @@ Cypress.Commands.add('clickViewSession', () => {
     cy.visit('/conference');
     cy.get('h1').contains('View Sessions').click();
  })
+ Cypress.Commands.add('dataCy', (value) => { 
+    return cy.get(`[data-cy=${value}]`);
+ })
 

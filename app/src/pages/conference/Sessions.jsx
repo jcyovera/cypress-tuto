@@ -38,7 +38,7 @@ function AllSessionList() {
 }
 
 function SessionList({ day }) {
-  if (day === "") day = "Wednesday";
+  if (day === "") day = "All";
 
   // execute query and store response json
   const { loading, error, data } = useQuery(SESSIONS, {
@@ -121,7 +121,7 @@ function SessionItem({ session }) {
 }
 
 export function Sessions() {
-  const [day, setDay] = useState("");
+  const [day, setDay] = useState("All");
   return (
     <>
       <section className="banner">
